@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.heading{
+    width: 100%;
+    height: 120px;
+    background: rgb(5,5,88);
+    background: linear-gradient(50deg, rgba(5,5,88,1) 34%, rgba(24,17,173,1) 79%);
+    font-size: 52px;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    position: relative;
+}
+.heading p{
+    position: absolute;
+    left: 25%;
+    bottom: 20%;
+    font-size: 32px;
+}
+.heading a{
+    color: #03a9f4;
+    transition: all 0.5s ease;
+}
+.heading a:hover{
+    color: aqua;
+}
+.heading span{
+    margin-left: 20px;
+    position: absolute;
+}
+.heading span:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+.heading span:nth-child(2){
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite ;
+}
+@keyframes animate{
+    0%,100%{
+        clip-path: polygon(16% 30%, 35% 32%, 47% 26%, 62% 28%, 74% 23%, 84% 14%, 95% 16%, 100% 25%, 100% 42%, 100% 100%, 0% 100%, 0 28%);
+
+    }
+    50%{
+        clip-path: polygon(11% 39%, 21% 47%, 31% 55%, 41% 55%, 52% 64%, 64% 58%, 75% 61%, 89% 56%, 100% 61%, 100% 100%, 0% 100%, 0 45%);
+
+    }
+
+}
+
+          /*             end heading           */
+
+.container{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper{
+    width: 80%;
+    height: 1000px;
+    box-shadow: -5px 10px 15px #8c8787;
+    position: relative;
+}
+.week-bar{
+    margin-top: 20px;
+    position: sticky;
+    top: 0px;
+    background: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.week-bar li a {
+    margin-top: 10px;
+    height: 50px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    background: #1B1464 ;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #2e86de;
+    transition: ease 1s;
+    font-size: 17px;
+    outline: none;
+}
+.week-bar li.week-bar-active a{
+  
+    background: #2e86de;
+}
+.week-bar li a:hover{
+    box-shadow: inset 0 0 60px 0  #2e86de;
+
+}
+.content{
+    margin-top: 50px;
+}
+
+.week ul{
+    margin-left: 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 160px 250px 320px 160px auto ; 
+}
+.week .info-bar{  
+    height: 40px;
+    background: #1B1464;
+    color: white; 
+    align-items: center;
+}
+.week .info-bar li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.week .info{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 160px 250px 320px 160px auto;
+}
+.week .info li{
+    border: 1px solid black;
+    height: auto;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*                about start             */
+
+.about{
+    width: 100%;
+    margin-top: 350px;
+    height: 650vh;
+}
+.about section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 130vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.about section .animate{
+    transition:  .8s;
+}
+.about h1{
+    position: relative;
+    z-index: 1;
+    font-size: 45px;
+    top: -140px;
+    font-weight: 500;
+    color: #CDF5FD;
+}
+.about p{
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    top: -140px;
+    margin-top: 20px;
+    color: #89CFF3;
+}
+.about a{
+    position: absolute;
+    bottom: 40%;
+    font-size: 32px;
+    color: white;
+}
+.about a:hover{
+    color: #D0D4CA;
+}
+.about .mssv{
+    margin-right: 166px;
+}
+.about .hobby{
+    margin-left: -66px;
+}
+.about .sec-2 .mssv{
+    left: -67px;
+}
+.sec-2 .class{
+    left: -152px;
+}
+.sec-2 .hobby{
+    left: -50px;
+}
+.about .sec-3 .name, .sec-4 .name{
+    left: -41px;
+}
+.sec-3 .hobby{
+    left: 20px;
+}
+.sec-4 .hobby{
+    right: 62px;
+}
+.sec-5 .hobby{
+    left: 20px;
+}
+.about .sec-1 .class,.sec-3 .class,.sec-4 .class,.sec-5 .class{
+    margin-right: 170px;
+}
+.sec-1, .sec-2, .sec-3, .sec-4, .sec-5{
+    transition: .8s linear ;
+    position: relative;
+}
+.sec-theme{
+    z-index: 0;
+    position: absolute;
+    background: #06283D;
+    top: 200px;
+    width: 600px;   
+    height: 300px;
+    border-radius: 10px;
+}
+
+/*                sec animation             */
+
+.sec-1 .animate, .sec-3 .animate{
+    transform: translateX(-500%)
+}
+.sec-1.show-animate .animate, .sec-3.show-animate .animate{
+    transform: translateX(0);
+}
+.sec-1.show-animate, .sec-2.show-animate, .sec-3.show-animate, .sec-4.show-animate ,.sec-5.show-animate{
+    background: #06283D;
+}
+.sec-1.show-animate .sec-theme, .sec-3.show-animate .sec-theme, 
+.sec-2.show-animate .sec-theme, .sec-4.show-animate .sec-theme, .sec-5.show-animate .sec-theme{
+    box-shadow: -5px 5px 20px #696969, 5px -5px 20px #696969;
+}
+.sec-2 .animate, .sec-4 .animate{
+    transform: translateX(500%);
+}
+.sec-2.show-animate .animate, .sec-4.show-animate .animate{
+    transform: translateX(0);
+}
+
+.sec-5 .animate{
+    transform: translateY(2000%);
+    transition: 4s;
+}
+.sec-5.show-animate .animate{
+    transform: translateY(0);
+}
+
+/*                end container              */
+
+.footer{
+    margin-top: 200px;
+    width: 100%;
+    height: 300px;
+    background: #0c2461;
+}
+
+/*              end footer                  */
+
+.back-top{
+    display: block;
+    color: #7f8fa6;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    border: none;
+    background: transparent ;
+    transition: ease 1s;
+    font-size: 17px;
+    outline: none;
+    transition: 0.2s ease;
+}
+.back-top:hover{
+    transform: translate(0,-10px);
+    color: rgb(89, 100, 114);
+}
